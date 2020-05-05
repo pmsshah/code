@@ -1,0 +1,9 @@
+
+public class DPJC4_Item_Demo {
+
+	public static void main(String[] args) {
+		DPJC4_Registry registry = new DPJC4_Registry();
+		
+	}
+
+}

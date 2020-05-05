@@ -1,0 +1,21 @@
+import java.util.List;
+
+public class DPJC4_Statmemt implements Cloneble {
+	private String sql;
+	private List<String> parameters;
+	private Record record;
+	
+	public Statment(String sql, List<String> parameters, Record record) {
+		this.sql = sql;
+		this.parameters = parameters;
+		this.record = record;
+	}
+	
+	public Statment clone() {
+		try {
+			return (Statment) super.clone();
+		} catch (CloneNoteSupportedException e) {
+			e.printStatckTrace();
+		}
+	}
+}

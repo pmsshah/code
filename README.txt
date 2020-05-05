@@ -7,4 +7,10 @@ Class 3:
 	handel complex constructor, no interface required, can be a sperate class. 
 		easy to work with legacy code. inner class could be external. 
 	v/s prototype: work around clone, avoid complex constructors, difficult with legacy code.
+
+Class 4: Prototype. Unique instance of the same object.
+	SQL Stmt, you want original copy and hange little bit.
+	avoid costly creation, avoid subclass??, dont use new, use clone, itilize interface, imp regestrey.
+	u can decide shallow / deep copy.
+	
 	

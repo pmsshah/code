@@ -1,0 +1,6 @@
+import java.util.Map;
+
+public class DPJC4_Registry {
+
+	private Map<String, DPJC4_Item> items = new HashMap<String, Item>();
+}

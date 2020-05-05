@@ -1,0 +1,34 @@
+import java.util.List;
+
+public class DPJC4_Statmemt implements Cloneable {
+	private String sql;
+	private List<String> parameters;
+	private DPJC4_Recrod record;
+	
+	public DPJC4_Statmemt(String sql, List<String> parameters, DPJC4_Recrod record) {
+		this.sql = sql;
+		this.parameters = parameters;
+		this.record = record;
+	}
+	
+	public DPJC4_Statmemt clone() {
+		try {
+			return (DPJC4_Statmemt) super.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStatckTrace();
+		}
+		return null;
+	}
+	
+	public List<String> getParameters() {
+		return parameters;
+	}
+	
+	public DPJC4_Recrod getRecord( ) {
+		return record;
+	}
+	
+	public String getSql() {
+		return sql;
+	}
+}

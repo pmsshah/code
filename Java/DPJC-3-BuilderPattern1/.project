@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/DPJC4_Statment.java</name>
+			<type>1</type>
+			<location>C:/Code/Java/DPJC-3-BuilderPattern1/src/DPJC4_Statment.java</location>
+		</link>
+	</linkedResources>
 </projectDescription>

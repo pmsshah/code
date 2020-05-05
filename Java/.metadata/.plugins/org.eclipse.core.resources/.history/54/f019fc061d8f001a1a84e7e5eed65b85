@@ -1,0 +1,35 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class DPJC4_Registry {
+
+	private Map<String, DPJC4_Item> items = new HashMap<String, DPJC4_Item>();
+	
+	public void DPJC4_Registry() {
+		loadItems();
+	}
+
+	public DPJC4_Item createItem(String type) {
+		DPJC4_Item item = null;
+		try {
+			item = (DPJC4_Item)(items.get(type).clone());
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return item;
+	}
+	
+	private void loadItems() {
+		DPJC4_Movie movie = new DPJC4_Movie();
+		movie.setTitle("Basic Movies");
+		movie.setPrice(24.99);
+		movie.setRuntime("2 Hours");
+		items.put("Movie", movie);
+		
+		DPJC4_Book book = new DPJC4_Book();
+		book.setNumberOfPages(355);
+		book.setPrice(19.99);
+		book.setTitle("Basic Book");
+		items.put("Book", book);
+	}
+}
