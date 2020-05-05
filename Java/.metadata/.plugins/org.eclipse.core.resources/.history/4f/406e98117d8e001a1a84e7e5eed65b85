@@ -1,0 +1,27 @@
+
+public class DPJC3_LunchOrder {
+	public static class Builder {
+		private String bread;
+		private String condiments;
+		private String dressing;
+		private String meat;
+		
+		public DPJC3_LunchOrder build() {
+			return new DPJC3_LunchOrder(this);
+		}
+		
+		
+	}
+	private final String bread;
+	private final String condiments;
+	private final String dressing;
+	private final String meat;
+	
+	private DPJC3_LunchOrder(Builder builder) {
+		this.bread = builder.bread;
+		this.condiments = builder.condiments;
+		this.dressing = builder.dressing;
+		this.meat = builder.meat;
+	}
+
+}
