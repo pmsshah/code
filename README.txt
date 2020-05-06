@@ -1,4 +1,5 @@
 Design Pattern in Java Creational
+Pattern contains other pattern it is framework.
 Class 3: 
 	C:\Code\Java\DPJC-3-BuilderPattern1
 	builder pattern with demo.
@@ -12,5 +13,8 @@ Class 4: Prototype. Unique instance of the same object.
 	SQL Stmt, you want original copy and hange little bit.
 	avoid costly creation, avoid subclass??, dont use new, use clone, itilize interface, imp regestrey.
 	u can decide shallow / deep copy.
+	Some time not clear when to use. Deep copy sometime don't solve the probelm.
+	Light weight constructor, copy it self, quick, v.s, give uniqe instance, 
+	factory, flexbile object, multiple constrctor, conrete instance, fresh instance, dont get default value.
 	
 	

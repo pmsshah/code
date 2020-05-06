@@ -10,5 +10,4 @@ public class DPJC3_LunchOrder_Demo {
 		System.out.println(lunchorder.getDressing());
 		System.out.println(lunchorder.getMeat());
 	}
-
 }
