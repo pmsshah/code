@@ -31,4 +31,23 @@
 	
 	Test Run and browse 127.0.0.1:8080/hellosvc it should work.
 	Whitelabel Error Page means, maping is not done.
-	
+
+* Add 
+	package code.demo.shah.model
+	Add class Hello
+		Add private String from, to, text. 
+		Generate construct/getter/setter/tostring.
+	Add package code.demo.shah.repository
+	Add class HelloRepository add class mapping @Repository.
+		Add private List<Hello> helloList = new ArrayList<>(
+			Array.aslist (
+				new Hello("john", "paul", "helllo paull")
+				new Hello("man", "woman", "helllo woman")
+			))
+		Add method List<Hello> getHelloList() return helloList; 
+	modify HelloService
+		Add HelloRepositorey hellorespositrey @autowired.
+		Add method List<Hello> getHelloList() { return hellorespositrey.getHelloLList } @RequestMapping("/hellorepo")
+		
+	Test Run and browse 127.0.0.1:8080/hellorepo it should work.
+	Whitelabel Error Page means, maping is not done.
