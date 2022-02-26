@@ -1,1 +1,34 @@
-* 
+* New project
+	Spring intializer, 
+		Spring Web
+		com.shah
+		FirstApp
+		java version 8
+	https://start.spring.io/
+		Spring Web
+		unzip.
+
+* Add 
+	Java Class HelloController
+	Add @RestController class annotation.
+	Add method sayHello return "Hello"
+	Add @RequestMapping("/hello") method annotation.
+	
+	Test Run and browse 127.0.0.1:8080/hello it should work.
+		Whitelabel Error Page means, mapping is not done.
+
+* Add 
+	package code.demo.shah.service
+	Add class HelloService 
+	Add @Service class annotation.
+	Add method sayHello return "say hello from servie"
+	
+	Within HelloControler 
+	Add object HelloService helloService
+	Add method annotation @Autowirded
+	Add method sayHelloSvc return helloService.sayHello() 
+	Add method @RequestMapping("/hellosvc")
+	
+	Test Run and browse 127.0.0.1:8080/hellosvc it should work.
+	Whitelabel Error Page means, maping is not done.
+	
