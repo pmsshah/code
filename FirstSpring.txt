@@ -51,3 +51,19 @@
 		
 	Test Run and browse 127.0.0.1:8080/hellorepo it should work.
 	Whitelabel Error Page means, maping is not done.
+
+* Add 
+	Modify Hello 
+	Add annotation @Id for object "from"
+	Add interface HelloMongoRepository extends MongoRepository<Hello, String>
+		Add import org.springframework.data.mongodb.repository.MongoRepository;
+		Add class annotation @Repository
+	Modify HelloService
+		Add HelloMongoRepository with object annotation @Autowired
+		Add addMoHelloList to add Hello Objects to Mongo
+		Add getMoHelloList to retrive data from Mongo
+	Modify HelloController
+		Add addMoHelloList with @RequestMapping("/hellomoadd")
+		Add getMoHelloList with @RequestMapping("/hellomoget")
+	
+	

@@ -28,4 +28,14 @@ public class HelloController {
     public List<Hello> sayHelloList() {
         return helloService.getHelloList();
     }
+
+    @RequestMapping("/hellomoadd")
+    public String addMoHelloList() {
+        return helloService.addMoHelloList();
+    }
+
+    @RequestMapping("/hellomoget")
+    public List<Hello> getMoHelloList() {
+        return helloService.getMoHelloList();
+    }
 }

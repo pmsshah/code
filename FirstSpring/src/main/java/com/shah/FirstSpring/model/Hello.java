@@ -1,6 +1,10 @@
 package com.shah.FirstSpring.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeId;
+import org.springframework.data.annotation.Id;
+
 public class Hello {
+    @Id
     private String from;
     private String to;
     private String text;
