@@ -8,8 +8,8 @@
 		Spring Web
 		unzip.
 
-* Add 
-	Java Class HelloController
+* Add RestController.
+	Add Java Class HelloController
 	Add @RestController class annotation.
 	Add method sayHello return "Hello"
 	Add @RequestMapping("/hello") method annotation.
@@ -17,8 +17,8 @@
 	Test Run and browse 127.0.0.1:8080/hello it should work.
 		Whitelabel Error Page means, mapping is not done.
 
-* Add 
-	package code.demo.shah.service
+* Add Service
+	Add package code.demo.shah.service
 	Add class HelloService 
 	Add @Service class annotation.
 	Add method sayHello return "say hello from servie"
@@ -32,8 +32,8 @@
 	Test Run and browse 127.0.0.1:8080/hellosvc it should work.
 	Whitelabel Error Page means, maping is not done.
 
-* Add 
-	package code.demo.shah.model
+* Add Repository
+	Add package code.demo.shah.model
 	Add class Hello
 		Add private String from, to, text. 
 		Generate construct/getter/setter/tostring.
@@ -52,7 +52,7 @@
 	Test Run and browse 127.0.0.1:8080/hellorepo it should work.
 	Whitelabel Error Page means, maping is not done.
 
-* Add 
+* Add Mongodb
 	Modify Hello 
 	Add annotation @Id for object "from"
 	Add interface HelloMongoRepository extends MongoRepository<Hello, String>
@@ -66,4 +66,29 @@
 		Add addMoHelloList with @RequestMapping("/hellomoadd")
 		Add getMoHelloList with @RequestMapping("/hellomoget")
 	
-	
+* Add FreeMarker
+	Add package controller
+		Rename HelloController to HelloRestController and move to package.
+		Add HelloUIController with class annotation @Controller
+		Add method public String greeting(@PathVariable String input, Model model)
+			with method annotation @GetMapping("/greeting/{input}")
+			with return "welcome"
+	Add pom.xml
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+	Add application.properties
+		spring.freemarker.enabled=true
+		spring.freemarker.suffix = .ftl
+		spring.thymeleaf.enabled=false
+	Add welcome.html and rename as welcome.ftl
+		add <h1> ${message} </h1>
+
+* Test
+       * http://127.0.0.1:8080/greeting/Piyush
+       * http://127.0.0.1:8080/hellomoadd
+       * http://127.0.0.1:8080/hellomoget
+       * http://127.0.0.1:8080/hellorepo
+       * http://127.0.0.1:8080/hellosvc
+       * http://127.0.0.1:8080/hello

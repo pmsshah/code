@@ -1,4 +1,4 @@
-package com.shah.FirstSpring;
+package com.shah.FirstSpring.controller;
 
 import com.shah.FirstSpring.model.Hello;
 import com.shah.FirstSpring.service.HelloService;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class HelloController {
+public class HelloRestController {
 
     @Autowired
     HelloService helloService;
