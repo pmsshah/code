@@ -66,7 +66,7 @@
 		Add addMoHelloList with @RequestMapping("/hellomoadd")
 		Add getMoHelloList with @RequestMapping("/hellomoget")
 	
-* Add FreeMarker
+* Add FreeMarker with greeting.
 	Add package controller
 		Rename HelloController to HelloRestController and move to package.
 		Add HelloUIController with class annotation @Controller
@@ -85,10 +85,27 @@
 	Add welcome.html and rename as welcome.ftl
 		add <h1> ${message} </h1>
 
+* Add FreeMarker with more.
+	Modify HelloUIController
+		Add HelloService helloService with object annotation @Autowired
+		Add public String listall(Model model) with annotation "listall"
+			return Hello from mongoDb
+	Add userlist.html and rename userlist.ftl
+		Add table
+		    <#list users as user>
+		      <tr>
+		        <td>${user.from}</td>
+		        <td>${user.to}</td>
+		        <td>${user.text}</td>
+		      </tr>
+		    </#list>
+
+
 * Test
-       * http://127.0.0.1:8080/greeting/Piyush
-       * http://127.0.0.1:8080/hellomoadd
-       * http://127.0.0.1:8080/hellomoget
-       * http://127.0.0.1:8080/hellorepo
-       * http://127.0.0.1:8080/hellosvc
-       * http://127.0.0.1:8080/hello
+	* http://127.0.0.1:8080/listall
+	* http://127.0.0.1:8080/greeting/Piyush
+	* http://127.0.0.1:8080/hellomoadd
+	* http://127.0.0.1:8080/hellomoget
+	* http://127.0.0.1:8080/hellorepo
+	* http://127.0.0.1:8080/hellosvc
+	* http://127.0.0.1:8080/hello

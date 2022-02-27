@@ -22,4 +22,13 @@ public class HelloUIController {
         //System.out.println(model.getAttribute("message"));
         return "welcome";
     }
+
+    @Autowired
+    HelloService helloService;
+
+    @GetMapping("/listall")
+    public String listall(Model model) {
+        model.addAttribute("users", helloService.getMoHelloList());
+        return "userlist";
+    }
 }
